@@ -1,0 +1,61 @@
+// # = -                         Apply Plugins                       - = #
+
+apply plugin: 'maven'
+
+// # = -                        Extra Versioning                     - = #
+
+ext {
+    buildNumber = System.getenv().BUILD_NUMBER != null ? System.getenv().BUILD_NUMBER : '0'
+    ciSystem = System.getenv().ciSystem != null ? System.getenv().ciSystem : 'unknown'
+    commit = System.getenv().commit != null ? System.getenv().commit : 'unknown'
+}
+
+// # = -                         Configurations                      - = #
+
+configurations {
+    deployerJars
+}
+
+// # = -                         Dependencies                        - = #
+
+dependencies {
+    deployerJars 'org.apache.maven.wagon:wagon-ftp:2.8'
+}
+
+// # = -                       Maven Deployment                      - = #
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            configuration = configurations.deployerJars
+            if(project.hasProperty('repo')) {
+                repository(url: project.repo) {
+                    authentication(userName: project.repoUsername, password: project.repoPassword)
+                }
+            }
+            pom {
+                groupId = project.group
+                artifactId = project.archivesBaseName
+                version = project.version
+                project {
+                    name project.archivesBaseName
+                    description project.description
+                    packaging 'jar'
+                    url project.url
+                    scm {
+                        url "https://github.com/$project.organization/$project.name"
+                        connection "scm:git:https://github.com/$project.organization/${project.name}.git"
+                        developerConnection "scm:git:git@github.com:$project.organization/${project.name}.git"
+                    }
+                    licenses {
+                        license {
+                            name 'Apache 2.0'
+                            url 'http://www.apache.org/licenses/LICENSE-2.0'
+                            distribution 'repo'
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
