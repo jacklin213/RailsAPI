@@ -1,0 +1,48 @@
+/*
+ * This file is a component of Powered Rails, this license makes sure any work
+ * associated with Powered Rails, must follow the conditions of the license included.
+ *
+ * Copyright 2015 PoweredRails
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.poweredrails.railsapi.server;
+
+/**
+ * <h3>Server Version</h3>
+ *
+ * <p>Represents the versions of Minecraft this server supports.</p>
+ */
+public interface ServerVersion {
+
+    /**
+     * <h6>Get Protocol Versions</h6>
+     *
+     * <p>Returns an array of Protocol Versions the server
+     * can support.</p>
+     *
+     * @return protocol versions
+     */
+    int[] getProtocolVersions();
+
+    /**
+     * <h6>Get Minecraft Versions</h6>
+     *
+     * <p>Returns an array of Minecraft Versions the server
+     * can support.</p>
+     *
+     * @return minecraft versions
+     */
+    String[] getMinecraftVersions();
+
+}
