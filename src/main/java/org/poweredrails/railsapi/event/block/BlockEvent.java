@@ -24,5 +24,5 @@ import org.poweredrails.railsapi.event.Event;
  * Parent class for all block related events.
  */
 public abstract class BlockEvent extends Event {
-	
+
 }

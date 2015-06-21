@@ -24,5 +24,5 @@ package org.poweredrails.railsapi.event;
  * <p>This class should be the parent of all events</p>
  */
 public abstract class Event {
-	
+
 }

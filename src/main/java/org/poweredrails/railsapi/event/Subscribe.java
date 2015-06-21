@@ -26,19 +26,19 @@ import java.lang.annotation.Target;
 /**
  * An annotation to mark methods as being event methods.
  * 
- * <p>The method being targeted must be public and must be in a class that is also
- * public.</p>
+ * <p>The method being targeted must be public and must be in a class that is
+ * also public.</p>
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.METHOD })
 public @interface Subscribe {
 
-	/**
-	 * Whether the handler should ignore cancelled events. If ignoreCancelled is
-	 * true and the event is cancelled, the method is not called. Otherwise, the
-	 * method is always called.
-	 *
-	 * @return If the handler should ignore cancelled events
-	 */
-	boolean ignoreCancelled() default false;
+    /**
+     * Whether the handler should ignore cancelled events. If ignoreCancelled is
+     * true and the event is cancelled, the method is not called. Otherwise, the
+     * method is always called.
+     *
+     * @return If the handler should ignore cancelled events
+     */
+    boolean ignoreCancelled() default false;
 }

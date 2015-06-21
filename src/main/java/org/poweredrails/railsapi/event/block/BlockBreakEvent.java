@@ -24,5 +24,5 @@ import org.poweredrails.railsapi.event.Event;
  * Called when a block has been broken.
  */
 public class BlockBreakEvent extends Event {
-	
+
 }
