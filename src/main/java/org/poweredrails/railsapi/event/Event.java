@@ -19,10 +19,9 @@
 package org.poweredrails.railsapi.event;
 
 /**
- * Represents an Event in Rails.
+ * <h3>Event</h3>
  * 
- * <p>This class should be the parent of all events</p>
+ * <p>Represents an event in Rails.</p>
  */
-public abstract class Event {
-
+public interface Event {
 }

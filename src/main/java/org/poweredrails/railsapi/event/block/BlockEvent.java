@@ -21,8 +21,9 @@ package org.poweredrails.railsapi.event.block;
 import org.poweredrails.railsapi.event.Event;
 
 /**
- * Parent class for all block related events.
+ * <h3>Block - Event</h3>
+ *
+ * <p>The parent interface for all Block related events.</p>
  */
-public abstract class BlockEvent extends Event {
-
+public interface BlockEvent extends Event {
 }

@@ -18,11 +18,12 @@
  */
 package org.poweredrails.railsapi.event.block;
 
-import org.poweredrails.railsapi.event.Event;
-
 /**
- * Called when a block has been placed broken.
+ * <h3>Block Place - Event</h3>
+ *
+ * <p>This event is called when a block inside
+ * a world has been placed.</p>
  */
-public abstract class BlockPlaceEvent extends Event {
+public interface BlockPlaceEvent extends BlockEvent {
 
 }

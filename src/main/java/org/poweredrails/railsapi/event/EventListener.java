@@ -19,8 +19,9 @@
 package org.poweredrails.railsapi.event;
 
 /**
- * Parent of all EventListeners
+ * <h3>Event Listener</h3>
+ *
+ * <p>Listens for an appropriate event.</p>
  */
-public interface Listener {
-
+public interface EventListener {
 }

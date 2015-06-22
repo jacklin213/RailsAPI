@@ -18,11 +18,11 @@
  */
 package org.poweredrails.railsapi.event.block;
 
-import org.poweredrails.railsapi.event.Event;
-
 /**
- * Called when a block has been broken.
+ * <h3>Block Break - Event</h3>
+ *
+ * <p>This event is called when a block inside
+ * a world has been destroyed.</p>
  */
-public class BlockBreakEvent extends Event {
-
+public interface BlockBreakEvent extends BlockEvent {
 }
