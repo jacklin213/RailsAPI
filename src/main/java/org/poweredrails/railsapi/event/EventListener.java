@@ -21,7 +21,7 @@ package org.poweredrails.railsapi.event;
 /**
  * <h3>Event Listener</h3>
  *
- * <p>Listens for an appropriate event.</p>
+ * <p>Marker class for listening to events.</p>
  */
-public interface EventListener {
+public interface Listener {
 }
